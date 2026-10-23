@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2a0610">
+<title>For My Uzma ❤️</title>
+<meta property="og:title" content="❤️ A Special Surprise For My Uzma ❤️">
+<meta property="og:description" content="Meri Jaan, Aaj Ka Din Sirf Tumhare Naam Hai 🥹💖">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- ambient layers -->
+<canvas id="fx" aria-hidden="true"></canvas>
+<div id="floaters" aria-hidden="true"></div>
+
+<!-- 1. WELCOME / ENVELOPE -->
+<section id="welcome" class="welcome">
+  <div class="welcome-inner">
+    <h1 class="welcome-title">❤️ A Special Surprise For My Uzma ❤️</h1>
+    <p class="welcome-sub">Meri Jaan, Aaj Ka Din Sirf Tumhare Naam Hai 🥹💖</p>
+
+    <div class="envelope-wrap" id="envelopeWrap">
+      <div class="envelope" id="envelope">
+        <div class="env-back"></div>
+        <div class="env-card"><span>Uzma</span></div>
+        <div class="env-front"></div>
+        <div class="env-flap"></div>
+        <div class="env-seal">❤️</div>
+      </div>
+    </div>
+
+    <button class="btn btn-main pulse" id="openBtn">Open Your Surprise 💌</button>
+  </div>
+</section>
+
+<!-- MAIN EXPERIENCE -->
+<main id="main" class="main hidden">
+
+  <!-- 2. HERO -->
+  <section class="hero" id="hero">
+    <p class="hero-pre reveal">✨ 24 October ✨</p>
+    <h1 class="hero-h1 reveal">Happy Birthday, Meri Jaan <span class="glow-name">Uzma</span>! ❤️🎂</h1>
+    <h2 class="hero-h2 reveal">Meri Uzma, Meri Wifey, Meri Mohabbat, Meri Duniya 👑❤️</h2>
+    <p class="hero-h3 reveal">You are my happiness, my peace, my home, and my forever. 🥹💍</p>
+    <div class="scroll-hint reveal" aria-hidden="true">Scroll down, my love ↓</div>
+  </section>
+
+  <!-- 3. LOVE LETTER -->
+  <section class="section" id="letterSection">
+    <h2 class="section-title reveal">💌 A Letter For My <span class="glow-name">Uzma</span> 💌</h2>
+    <div class="letter-card glass reveal">
+      <div class="corner tl">❀</div><div class="corner tr">❀</div>
+      <div class="corner bl">❀</div><div class="corner br">❀</div>
+      <div class="letter-to">To my Uzma,</div>
+      <div id="letterBody" class="letter-body"></div>
+      <div class="letter-sign">Forever yours ❤️</div>
+    </div>
+  </section>
+
+  <!-- 4a. CAKE -->
+  <section class="section" id="cakeSection">
+    <h2 class="section-title reveal">🎂 Your Birthday Cake, <span class="glow-name">Uzma</span> 🎂</h2>
+    <div class="cake-stage reveal">
+      <div class="cake" id="cake">
+        <div class="candles">
+          <div class="candle"><i class="flame"></i><b></b></div>
+          <div class="candle"><i class="flame"></i><b></b></div>
+          <div class="candle"><i class="flame"></i><b></b></div>
+        </div>
+        <div class="tier t3"><span class="drip"></span></div>
+        <div class="tier t2"><span class="drip"></span></div>
+        <div class="tier t1"><span class="drip"></span></div>
+        <div class="plate"></div>
+      </div>
+    </div>
+    <button class="btn btn-main" id="wishBtn">Make a Wish, Uzma! 🎂</button>
+    <p class="wish-msg" id="wishMsg"></p>
+  </section>
+
+  <!-- 4b. LOVE METER -->
+  <section class="section" id="meterSection">
+    <h2 class="section-title reveal">💖 My Love For <span class="glow-name">Uzma</span> 💖</h2>
+    <div class="meter glass reveal">
+      <div class="meter-heart" id="meterHeart">❤️</div>
+      <div class="meter-bar"><div class="meter-fill" id="meterFill"></div></div>
+      <div class="meter-pct" id="meterPct">0%</div>
+      <p class="meter-msg" id="meterMsg"></p>
+      <button class="btn btn-ghost" id="meterBtn">Measure Again 💞</button>
+    </div>
+  </section>
+
+  <!-- 4c. GIFT -->
+  <section class="section" id="giftSection">
+    <h2 class="section-title reveal">🎁 One More Thing 🎁</h2>
+    <div class="gift reveal" id="giftBox" aria-hidden="true">
+      <div class="gift-lid"></div><div class="gift-body"></div><div class="gift-ribbon"></div>
+    </div>
+    <button class="btn btn-main" id="giftBtn">Uzma, Open Your Special Gift 🎁</button>
+  </section>
+
+  <!-- 4d. GALLERY -->
+  <section class="section" id="gallerySection">
+    <h2 class="section-title reveal">📸 Our Beautiful Memories 📸</h2>
+    <p class="section-sub reveal">Every picture is a chapter of us, Uzma. 🥹</p>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <!-- FINAL BUTTON -->
+  <section class="section last" id="finalSection">
+    <p class="section-sub reveal">One last thing, Meri Jaan… 💍</p>
+    <button class="btn btn-main pulse" id="finalBtn">Tap For My Forever 💍</button>
+  </section>
+</main>
+
+<!-- GIFT MODAL -->
+<div class="modal hidden" id="giftModal" role="dialog" aria-modal="true">
+  <div class="modal-card glass">
+    <div class="modal-emoji">🎁💖</div>
+    <h3 id="giftTitle"></h3>
+    <p id="giftText"></p>
+    <button class="btn btn-main" id="giftClose">Close With A Smile 😘</button>
+  </div>
+</div>
+
+<!-- 4f. FINAL FULL-SCREEN -->
+<div class="finale hidden" id="finale">
+  <button class="finale-close" id="finaleClose" aria-label="Close">✕</button>
+  <div class="finale-inner">
+    <h1 class="finale-1" id="fin1">Forever Yours, <span class="glow-name">Uzma</span> ❤️💍♾️</h1>
+    <h2 class="finale-2" id="fin2">I LOVE YOU SO MUCH, MERI JAAN UZMA! 😘❤️🫶🏻</h2>
+  </div>
+</div>
+
+<!-- 4e. MUSIC PLAYER -->
+<div class="player hidden glass" id="player">
+  <button id="playBtn" aria-label="Play or pause music">▶</button>
+  <span class="player-label" id="playLabel">Our song 🎶</span>
+  <button id="muteBtn" aria-label="Mute or unmute">🔊</button>
+</div>
+<audio id="bgm" loop preload="none">
+  <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<script src="letter.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
